@@ -2,7 +2,7 @@
 // $light-orange: #ff8c00;
 // $navbar-default-color: $light-orange;
 
-@import "font-awesome-sprockets";
+//@import "font-awesome-sprockets";
 @import "font-awesome";
 @import "bootstrap";
 @import "sticky-footer";
@@ -19,4 +19,8 @@
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
   margin-bottom: 0;
+}
+
+#map {
+  height: 400px;
 }

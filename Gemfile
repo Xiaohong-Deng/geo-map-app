@@ -62,6 +62,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'administrate', '~> 0.10.0'
+gem 'bootstrap4-kaminari-views'
 gem 'data-confirm-modal', '~> 1.6.2'
 gem 'devise', '~> 4.4.3'
 gem 'devise-bootstrapped', github: 'excid3/devise-bootstrapped', branch: 'bootstrap4'
