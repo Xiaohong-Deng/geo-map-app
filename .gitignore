@@ -33,3 +33,9 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+# jetbrains
+.idea/
+
+# ruby unittest
+test/
