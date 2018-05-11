@@ -83,3 +83,4 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'sitemap_generator', '~> 6.0', '>= 6.0.1'
 
 gem 'geocoder', '~> 1.4'
+gem 'searchkick'
