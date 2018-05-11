@@ -1,19 +1,19 @@
 document.addEventListener("turbolinks:load", function() {
-  new GMaps({
+  let map = new GMaps({
     div: '#map',
     lat: -12,
     lng: -77
   });
   window.map = map;
 
-  var transactions = JSON.parse(document.querySelector("#map").dataset.transactions);
+  let transactions = JSON.parse(document.querySelector("#map").dataset.transactions);
   window.transactions = transactions;
 
-  var bounds = new google.maps.LatLngBounds();
+  let bounds = new google.maps.LatLngBounds();
 
   transactions.forEach(function(transaction) {
     if (transaction.latitude && transaction.longitude) {
-      let markder = map.addMarker({
+      let marker = map.addMarker({
         lat: transaction.latitude,
         lng: transaction.longitude,
         title: transaction.address,
@@ -22,7 +22,7 @@ document.addEventListener("turbolinks:load", function() {
         }
       });
 
-      bounds.extend(markder.position);
+      bounds.extend(marker.position);
     }
   });
 

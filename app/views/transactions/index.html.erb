@@ -1,16 +1,15 @@
 <div class="row">
   <div class="col">
     <h1>Transactions</h1>
-    <% transaction.each do |transaction| %>
+    <% @transactions.each do |transaction| %>
       <div>
         <h5><%= link_to transaction.address, transaction %></h5>
-        <div><%= pluralize transaction.beds, "bed" %> <%= pluralize transaction.baths "bath" %> <%= transaction.sq__ft %> sqft</div>
+        <div><%= pluralize transaction.beds, "bed" %> <%= pluralize transaction.baths, "bath" %> <%= transaction.sq__ft %> sqft</div>
         <div>Sold: <%= l transaction.sale_date.to_date %> for <%= number_to_currency transaction.price %></div>
       </div>
       <hr />
-
-      <%= paginate @transactions, theme: 'twitter-bootstrap-4', remote: true %>
     <% end %>
+    <%= paginate @transactions, theme: 'twitter-bootstrap-4', remote: true %>
   </div>
   <div class="col">
     <!-- address is not a attribute, call it and pass the value as a property -->

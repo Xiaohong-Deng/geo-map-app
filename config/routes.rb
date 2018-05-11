@@ -2,6 +2,7 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   get 'transactions/index'
+  get 'transactions/:id', to: 'transactions#show', as: 'transaction'
   namespace :admin do
       resources :users
       resources :announcements
