@@ -1,6 +1,11 @@
 class TransactionsController < ApplicationController
   def index
-    @transactions = Transaction.page(params[:page]).per(5)
+    @transactions = if params[:near]
+                      Transaction.near(params[:near])
+                    else
+                      Transaction.all
+                    end
+    @transactions = @transaction.page(params[:page]).per(5)
   end
 
   def show
