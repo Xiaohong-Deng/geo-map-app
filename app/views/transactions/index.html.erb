@@ -13,6 +13,7 @@
   </div>
   <div class="col">
     <!-- address is not a attribute, call it and pass the value as a property -->
-    <%= tag.div nil, id: 'map', data: { transactions: @transactions.to_json(methods: [:address]) } %>
+    <%= tag.div nil, id: 'map', data: { transactions: @transactions.to_json(methods: [:address]), l: params[:l] } %>
+    <%= link_to "Redo search in this area", "#", id: "redo-search" %>
   </div>
 </div>
